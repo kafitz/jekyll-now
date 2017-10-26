@@ -15,6 +15,7 @@
 
 html {
   font-size: 100%;
+  height: 100%;
 }
 
 body {
@@ -22,6 +23,7 @@ body {
   background-image: linear-gradient(180deg, rgb(60, 60, 60) 0%, rgb(90, 90, 100) 100%);
   font: 18px/1.4 $helvetica;
   color: $darkGray;
+  height: 100%;
 }
 
 .container {
@@ -37,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 
   line-height: 1.7;
-  margin: 1em 0 15px;
+  margin: 0.2em 0 15px;
   padding: 0;
 
   @include mobile {
@@ -45,8 +47,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-h1 {
-  font-size: 30px;
+h1 {    
+  margin: .67em 0;
+  font-weight: 500;
+  font-size: 1.6em;
   a {
     color: inherit;
   }
@@ -151,88 +155,43 @@ img {
 // .masthead
 //
 
-.masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+.header {
+  margin: 1em 0;
+}
 
-  @include mobile {
+  .header-title {
     text-align: center;
-  }
-}
-
-.site-avatar {
-  float: left;
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
+    
+    h1 {
+      color: #EEE;
+      font-family: $firaSans;
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 1em;
+      letter-spacing: 0.03em;
+    }    
   }
 
-  img {
-    border-radius: 5px;
-  }
-}
+  .header-links {
+    text-align: center;
 
-.site-info {
-  float: left;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-.site-name {
-  margin: 0;
-  color: $lighterGray;
-  cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
-  font-size: 28px;
-  letter-spacing: 1px;
-}
-
-.site-description {
-  margin: -5px 0 0 0;
-  color: $lightGray;
-  font-size: 16px;
-
-  @include mobile {
-    margin: 3px 0;
-  }
-}
-
-nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
-  font-size: 18px;
-
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
-
-  a {
-    margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
-
-    @include mobile {
-      margin: 0 10px;
-      color: $blue;
+    a {
+      color: #DDD;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 0.6em;
     }
+    
+    a.active {
+      text-decoration: underline;
+    }
+    
+    a:hover {
+      color: #FFF;
+    }    
   }
-}
+
 
 //
 // .main
@@ -240,11 +199,11 @@ nav {
 
 #main {
   background: $lighterGray;
+  border: 2px solid $lightGray;
 }
 
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lighterGray;
+.posts > .post:first-child {
+  padding-top: 0.1em;
 }
 
 .posts > .post:last-child {
@@ -253,6 +212,12 @@ nav {
 }
 
 .post {
+  padding: 0 0.5em 1em;
+  
+  h1 {
+    margin: 0.05em 0;
+  }
+  
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -262,13 +227,24 @@ nav {
     font-style: italic;
   }
 
+  .entry {
+    p {
+      margin: 5px 0;
+    }
+  }
+  
   .comments {
     margin-top: 10px;
   }
 
   .read-more {
+    color: $cobalt;
     text-transform: uppercase;
     font-size: 15px;
+  }
+  
+  .date {
+    margin-top: 15px;
   }
 }
 
@@ -277,7 +253,9 @@ nav {
 }
 
 footer {
+  color: #cacaca;
   padding: 20px 0;
+  font-size: 0.7em;
   text-align: center;
 }
 
