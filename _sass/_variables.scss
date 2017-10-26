@@ -1,7 +1,8 @@
-
 //
 // VARIABLES
 //
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400');
+
 
 // Colors
 $blue: #4183C4;
@@ -11,13 +12,15 @@ $black: #000;
 $darkerGray: #222;
 $darkGray: #333;
 $gray: #666;
-$lightGray: #eee;
+$lightGray: #aaa;
+$lighterGray: #eee;
 $white: #fff;
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
+$firaSans: "Fira Sans", Helvetica, Arial  , sans-serif;
 
 // Mobile breakpoints
 @mixin mobile {

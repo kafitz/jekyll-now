@@ -18,7 +18,8 @@ html {
 }
 
 body {
-	background: $white;
+  background: $white;
+  background-image: linear-gradient(180deg, rgb(60, 60, 60) 0%, rgb(90, 90, 100) 100%);
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -123,11 +124,11 @@ img {
 // Specify the color of the selection
 ::-moz-selection {
   color: $black;
-  background: $lightGray;
+  background: $lighterGray;
 }
 ::selection {
   color: $black;
-  background: $lightGray;
+  background: $lighterGray;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -149,10 +150,6 @@ img {
 //
 // .masthead
 //
-
-.wrapper-masthead {
-  margin-bottom: 50px;
-}
 
 .masthead {
   padding: 20px 0;
@@ -192,7 +189,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: $lighterGray;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -202,7 +199,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: $lightGray;
   font-size: 16px;
 
   @include mobile {
@@ -241,9 +238,13 @@ nav {
 // .main
 //
 
+#main {
+  background: $lighterGray;
+}
+
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $lighterGray;
 }
 
 .posts > .post:last-child {
@@ -273,9 +274,6 @@ nav {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
 }
 
 footer {
